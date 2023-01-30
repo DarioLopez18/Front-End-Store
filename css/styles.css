@@ -1,0 +1,125 @@
+:root{
+    --primario: #9c27b0;
+    --primarioOscuro: #89119d;
+    --secundario: #FFCE00;
+    --secundarioOscuro: rgb(233,287,2);
+    --blanco: #FFF;
+    --negro: #000;
+
+    --fuente-principal: 'Staatliches', cursive;
+
+}
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*,*:before,*:after{
+    box-sizing: inherit;
+}
+/**Globales**/
+body{
+    background-color: var(--primario);
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+p{
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--blanco);
+}
+a{text-decoration: none;}
+img{max-width: 100%;}
+h1,h2,h3{
+    text-align: center;
+    color: var(--secundario);
+    font-family: var(--fuente-principal);
+}
+h1{font-size: 4rem;}
+h2{font-size: 3.2rem;}
+h3{font-size: 2.4rem;}
+/*header*/
+.header{
+    display: flex;
+    justify-content: center;
+}
+.header__logo{
+    width: 100%;
+}
+.navegacion{
+    background-color: var(--primarioOscuro);
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+}
+.navegacion__enlace{
+    color: var(--blanco);
+    font-size: 3rem;
+    margin-right: 2rem;
+}
+.navegacion__enlace:last-of-type{
+    margin-right: 0;
+}
+.navegacion__enlace--activo,.navegacion__enlace:hover{
+    color: var(--secundario);
+}
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:2rem;
+}
+
+.producto{
+    background-color: var(--primarioOscuro);
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.producto__precio,.producto__nombre{
+    font-family: var(--fuente-principal);
+    font-size: 4rem;
+    text-align: center;
+    margin: 0;
+}
+
+.producto__precio{
+    color: var(--secundario);
+}
+.grafico{
+    min-height: 30rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.grafico--camisas{
+    background-image: url(../img/grafico1.jpg)
+}
+
+.grafico--node{
+    background-image: url(../img/grafico2.jpg);
+}
+
+.grafico--camisas{
+    grid-column: 1/3;
+    grid-row: 2/3;
+}
+
+.grafico--node{
+    grid-column: 2/4;
+    grid-row: 6/7;
+}
+
+.footer{
+    background-color: var(--primarioOscuro);
+    padding: 1rem;
+    margin-top: 2rem;
+}
+.footer__texto{
+    text-align: center;
+    font-family: var(--fuente-principal);
+    font-size: 2.2rem;
+}
